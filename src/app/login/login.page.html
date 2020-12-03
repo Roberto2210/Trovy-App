@@ -1,0 +1,56 @@
+<ion-header no-border>
+ <div class="login-header ion-padding">
+   <img class="logo-img" src="../../assets/img/logo-intro.png"> 
+ </div>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+      <div class="heading-column-1r">
+        <h1 class="big-heading">Login</h1>
+  
+      </div>
+      <ion-label class="login-intro">
+        Registrate como Usuario para ser parte de la logistica de Trovy
+      </ion-label>
+  </div>
+ <ion-card>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="onLogin(email, password)" expand="block"  routerLink="/tabs">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="ion-text-end">
+          <a routerLink="/forgot-password">Forgot password? </a>
+        </p>
+      </ion-col>
+    </ion-row>
+    <span class="center-span"> or </span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" (click)="onLoginGoogle()" expand="block"
+          >Login with Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+    <ion-col>
+      <p class="ion-text-end">
+        <a routerLink="/register">Create an account </a>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</ion-content>
